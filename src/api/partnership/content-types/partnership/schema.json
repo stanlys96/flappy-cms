@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partnerships",
+  "info": {
+    "singularName": "partnership",
+    "pluralName": "partnerships",
+    "displayName": "partnership",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "twitter_account": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::twitter-account.twitter-account",
+      "mappedBy": "partnership"
+    },
+    "partner_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::partner-list.partner-list",
+      "inversedBy": "partnerships"
+    },
+    "allocation": {
+      "type": "float"
+    },
+    "value1": {
+      "type": "float"
+    },
+    "value2": {
+      "type": "float"
+    }
+  }
+}

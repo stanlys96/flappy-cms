@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presales",
+  "info": {
+    "singularName": "presale",
+    "pluralName": "presales",
+    "displayName": "presale",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transaction_hash": {
+      "type": "string",
+      "unique": true
+    },
+    "amount": {
+      "type": "float"
+    },
+    "referral_code": {
+      "type": "string"
+    },
+    "twitter_account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::twitter-account.twitter-account",
+      "inversedBy": "presales"
+    },
+    "presale_wallet_address": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::presale-wallet-address.presale-wallet-address",
+      "inversedBy": "presales"
+    },
+    "wallet_address": {
+      "type": "string"
+    }
+  }
+}

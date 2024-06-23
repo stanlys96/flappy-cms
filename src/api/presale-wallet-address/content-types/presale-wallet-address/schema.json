@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presale_wallet_addresses",
+  "info": {
+    "singularName": "presale-wallet-address",
+    "pluralName": "presale-wallet-addresses",
+    "displayName": "presale-wallet-address",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_amount": {
+      "type": "float"
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "presales": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::presale.presale",
+      "mappedBy": "presale_wallet_address"
+    },
+    "twitter_account": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::twitter-account.twitter-account",
+      "inversedBy": "presale_wallet_address"
+    }
+  }
+}

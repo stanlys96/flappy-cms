@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flappy_games",
+  "info": {
+    "singularName": "flappy-game",
+    "pluralName": "flappy-games",
+    "displayName": "flappy_game",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "score": {
+      "type": "integer"
+    },
+    "twitter_account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::twitter-account.twitter-account",
+      "inversedBy": "flappy_games"
+    },
+    "cheat_game": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cheat-game.cheat-game",
+      "mappedBy": "flappy_game"
+    },
+    "time_difference": {
+      "type": "float"
+    }
+  }
+}

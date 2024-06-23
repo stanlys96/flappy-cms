@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boosted_accounts",
+  "info": {
+    "singularName": "boosted-account",
+    "pluralName": "boosted-accounts",
+    "displayName": "boosted_account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "twitter_username": {
+      "type": "string"
+    },
+    "boost": {
+      "type": "float"
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "x_handle": {
+      "type": "string"
+    },
+    "referral_code": {
+      "type": "string"
+    },
+    "presale_points": {
+      "type": "float"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "twitter_accounts",
+  "info": {
+    "singularName": "twitter-account",
+    "pluralName": "twitter-accounts",
+    "displayName": "twitter_account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "is_wallet": {
+      "type": "boolean"
+    },
+    "is_socialaction": {
+      "type": "boolean"
+    },
+    "twitter_name": {
+      "type": "string"
+    },
+    "twitter_pic": {
+      "type": "string"
+    },
+    "twitter_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "twitter_username": {
+      "type": "string"
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "high_score": {
+      "type": "integer"
+    },
+    "referral_code": {
+      "type": "string"
+    },
+    "show_success_modal": {
+      "type": "boolean"
+    },
+    "partnership": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::partnership.partnership",
+      "inversedBy": "twitter_account"
+    },
+    "flappy_games": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::flappy-game.flappy-game",
+      "mappedBy": "twitter_account"
+    },
+    "one_hundred_points": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::one-hundred-point.one-hundred-point",
+      "mappedBy": "twitter_account"
+    },
+    "cheater": {
+      "type": "boolean"
+    },
+    "cheat_games": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cheat-game.cheat-game",
+      "mappedBy": "twitter_account"
+    },
+    "presales": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::presale.presale",
+      "mappedBy": "twitter_account"
+    },
+    "presale_wallet_address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::presale-wallet-address.presale-wallet-address",
+      "mappedBy": "twitter_account"
+    },
+    "presale_points": {
+      "type": "float"
+    },
+    "boosted": {
+      "type": "boolean"
+    },
+    "boost_multiplier": {
+      "type": "decimal"
+    }
+  }
+}

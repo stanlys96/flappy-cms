@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partner_lists",
+  "info": {
+    "singularName": "partner-list",
+    "pluralName": "partner-lists",
+    "displayName": "partner_list",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_name": {
+      "type": "string"
+    },
+    "x_handle": {
+      "type": "string"
+    },
+    "contract_address": {
+      "type": "string"
+    },
+    "isNft": {
+      "type": "boolean"
+    },
+    "contract_address2": {
+      "type": "string"
+    },
+    "min_value": {
+      "type": "integer"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "symbol2": {
+      "type": "string"
+    },
+    "is_multiple": {
+      "type": "boolean"
+    },
+    "min_value2": {
+      "type": "integer"
+    },
+    "abi2": {
+      "type": "json"
+    },
+    "abi": {
+      "type": "json"
+    },
+    "partnerships": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partnership.partnership",
+      "mappedBy": "partner_list"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "allocation": {
+      "type": "integer"
+    }
+  }
+}

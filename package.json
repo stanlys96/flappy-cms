@@ -1,0 +1,42 @@
+{
+  "name": "flappy-blast-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@ethersproject/units": "^5.7.0",
+    "@strapi/plugin-cloud": "4.24.5",
+    "@strapi/plugin-i18n": "4.24.5",
+    "@strapi/plugin-users-permissions": "4.24.5",
+    "@strapi/strapi": "4.24.5",
+    "better-sqlite3": "8.6.0",
+    "bull": "^4.13.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "pg": "^8.12.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "redis": "^4.6.14",
+    "styled-components": "5.3.3",
+    "web3": "^4.10.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "fe050ec4-4f78-43f5-a840-e85d9ea2ddeb"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

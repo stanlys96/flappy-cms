@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cheat_games",
+  "info": {
+    "singularName": "cheat-game",
+    "pluralName": "cheat-games",
+    "displayName": "cheat_game",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "flappy_game": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::flappy-game.flappy-game",
+      "inversedBy": "cheat_game"
+    },
+    "twitter_account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::twitter-account.twitter-account",
+      "inversedBy": "cheat_games"
+    }
+  }
+}
