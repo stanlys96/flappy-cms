@@ -24,27 +24,27 @@ module.exports = {
       throw new Error("Internal server error!");
     }
   },
-  // async afterCreate(event) {
-  //   const { params, result } = event;
+  async afterCreate(event) {
+    const { params, result } = event;
 
-  //   if (params.data.score > 0) {
-  //     await strapi.entityService.update(
-  //       "api::twitter-account.twitter-account",
-  //       params.data.twitter_account,
-  //       {
-  //         data: {
-  //           cheater: true,
-  //         },
-  //       }
-  //     );
-  //     await strapi.entityService.create("api::cheat-game.cheat-game", {
-  //       data: {
-  //         flappy_game: result.id,
-  //         twitter_account: params.data.twitter_account,
-  //       },
-  //     });
-  //   }
-  // },
+    if (params.data.score > 0) {
+      await strapi.entityService.update(
+        "api::twitter-account.twitter-account",
+        params.data.twitter_account,
+        {
+          data: {
+            cheater: true,
+          },
+        }
+      );
+      await strapi.entityService.create("api::cheat-game.cheat-game", {
+        data: {
+          flappy_game: result.id,
+          twitter_account: params.data.twitter_account,
+        },
+      });
+    }
+  },
   async beforeUpdate(event, data) {
     const { params, result } = event;
 
